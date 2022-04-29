@@ -1,0 +1,93 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La ferme des 3 chênes</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.jpg">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Bienvenue à La Ferme des Trois Chênes !</h1>
+        <p>La Ferme des Trois Chênes vous propose de rencontrer les animaux et de suivre la croissance des cultures au fil des saisons… La ferme est familiale : Marc, Fabienne et leurs trois filles vivent et travaillent sur cette exploitation laitière et de culture.
+        Veaux, vaches, génisses de race Holstein et Jersey vous emmènent à la traite en carrousel ! Système de traite harmonieux où les vaches sont traites sur un plateau tournant.
+        Les petits veaux sont nourris au bon lait de leur mère et au foin appétissant des prairies de la ferme.
+        Les cultures de froment, betteraves, colza, épeautre, escourgeon, maïs, mélanges d’herbes fourragères, fournissent aux vaches l’essentiel de leur nourriture. Le surplus est vendu à l’industrie qui en fabrique le pain, le sucre, l’huile, pour les hommes et les tourteaux et autres nourritures pour les animaux.</p>
+        
+        <p><img src="C:\Users\lysou\OneDrive\Documents\Projet2\flask-tutorial\flaskr\templates\images\cow.png" width= 100px height=100px /></p>
+        
+        
+    <h2>Nombre de vêlages par jour sur une période</h2>
+    
+    <h3>Choix de la population à étudier </h3>
+        <p><form method="post">
+        <p><label for="famille">Choisissez une famille à analyser : </label>
+        <select name="famille" required>
+            <option value="">Choisissez une option</option>
+            <option value="holstein">Holstein</option>
+            <option value="jersey">Jersey</option>
+            <option value="blanc-bleu-neige">Blanc Bleu Neige</option>
+            </select></p>
+        <p><label for="start">Début de la période à analyser :</label>
+        <input type="date" name="trip-start" min="1900-01-01" max="2022-03-27" required></p>
+        <p><label for="start">Fin de la période à analyser:</label>
+        <input type="date" name="trip-stop" min="1900-01-01" max="2022-03-27" required></p>
+        <p><label for="button">
+        <input type="submit" value="Afficher le graphe" required></input></p>
+        </form>
+    
+    <h2>Distribution des races</h2>
+    
+    <h3> Choix de la population à étudier</h3> 
+        <p>Choisissez une ou plusieurs races :<form method="post">
+        <input type="checkbox" name="hosltein" value="Holstein">Holstein<br> 
+        <input type="checkbox" name="jersey" value="Jersey">Jersey<br>
+        <input type="checkbox" name="bbn" value="Bleu Blanc Neige">Bleu Blanc Neige<br></p>
+        
+        <p><label for="%race1">Pourcentage minimum d'Holstein : </label> 
+        <input type="text" name="pourcentage1" placeholder="Ex: 0.75" /></p>
+        <p><label for="%race2">Pourcentage minimum de Jersey : </label> 
+        <input type="text" name="pourcentage2" placeholder="Ex: 0.75"/></p>
+        <p><label for="%race3">Pourcentage minimum de Bleu Blanc Neige: </label> 
+        <input type="text" name="pourcentage2" placeholder="Ex: 0.75"/></p>
+        
+        <p>
+        <input type="submit" value="Afficher le graphe">
+        </p></form>
+        
+    <h2>Les animaux nés en période de pleine lune et ceux nés en dehors</h2>
+    
+    <h3> Choix de la population à étudier</h3> 
+        <p><form method="post">
+        
+        <p><label for="famille">Choisissez une famille à analyser : </label>
+        <select name="famille" required>
+            <option value="">Choisissez une option</option>
+            <option value="holstein">Holstein</option>
+            <option value="jersey">Jersey</option>
+            <option value="blanc-bleu-neige">Blanc Bleu Neige</option>
+            </select></p>
+        
+        <p><label for="start">Début de la période à analyser :</label>
+        <input type="date" name="trip-start" min="1900-01-01" max="2022-03-27" required></p>
+        <p><label for="start">Fin de la période à analyser:</label>
+        <input type="date" name="trip-stop" min="1900-01-01" max="2022-03-27" required></p>
+        
+    <h3>Choix du graphique à montrer</h3>
+        <p><label for="pleinelune">Type de graphique : </label>
+        <select name="pleinelune" required>
+           <option value="">Choisissez une option</option>
+           <option value="lune">Durant la pleine lune</option>
+           <option value="autre">Autre</option>
+        </select></p>
+        <pre><form action="input_button.htm">
+        <p><input type="submit" value="Afficher le graphe">
+        </p></form></pre>
+  
+</body>
+</html>
