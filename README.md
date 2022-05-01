@@ -39,8 +39,8 @@ A savoir :
 
 Les templates sont tous les fichiers Html nécessaires à l'application tandis que les fichiers statiques sont les fichiers CSS relié au Html.
 
-- accueil.html et static.css représentent la page principale
-- graph.html et     correspondent aux graphes affichés 
+- accueil.html et styleacceuil.css représentent la page principale
+- graph.html et stylegraph.css correspondent à la mise en page des graphes affichés 
 
 #### 2. __init__.py
 
