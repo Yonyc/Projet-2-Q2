@@ -11,7 +11,7 @@ Pour rappel, vous pouvez retrouver les étapes ici : http://renaud-detry.net/tea
 
 ##### 3. Installez les packages nécessaires au fonctionnement du site. 
 
->pip install -r requirement.txt
+>pip install -r requirements.txt
 
 
 
