@@ -25,7 +25,7 @@ def close_db(e=None):
 def init_db():
     db = get_db()
 
-    with current_app.open_resource('Base_de_donnée_sql.sql') as f:
+    with current_app.open_resource('Base_de_donnée/Base_de_donnée_sql.sql') as f:
         db.executescript(f.read().decode('utf8'))
 
 
