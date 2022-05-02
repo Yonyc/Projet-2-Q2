@@ -2,10 +2,18 @@
 <html>
 <head>
     <meta charset="utf-8">
+    
+    <! rendre le site responsive>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La ferme des 3 chênes</title>
+    
+    <! ajout logo dans l'onglet>
     <link rel="icon" type="image/png" sizes="16x16" href="images/logo.jpg">
+    
+    <! liaisaison de la feuille de style>
     <link rel="stylesheet" href="static/styleaccueil.css">
+    
+    <! changement de police du site>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
@@ -24,30 +32,42 @@
     <h2>Nombre de vêlages par jour sur une période</h2>
     
     <h3>Choix de la population à étudier </h3>
+    
+    <! ouverture d'un formulaire à renvoyer>
         <p><form method="post">
         <p><label for="famille">Choisissez une famille à analyser : </label>
-        <select name="famille" required>
+        <! insertion d'une liste déroulante>
+            <select name="famille" required>
             <option value="">Choisissez une option</option>
             <option value="holstein">Holstein</option>
             <option value="jersey">Jersey</option>
             <option value="blanc-bleu-neige">Blanc Bleu Neige</option>
             </select></p>
+    
+        <! insertion d'un calendrier>
         <p><label for="start">Début de la période à analyser :</label>
         <input type="date" name="trip-start" min="1990-01-01" max="2022-03-27" required></p>
         <p><label for="start">Fin de la période à analyser:</label>
         <input type="date" name="trip-stop" min="1990-01-01" max="2022-03-27" required></p>
         <p><label for="button">
+        
+        <! insertion d'un bouton qui renvoie le formulaire>
         <input type="submit" value="Afficher le graphe" required></input></p>
         </form>
     
     <h2>Distribution des races</h2>
     
     <h3> Choix de la population à étudier</h3> 
-        <p>Choisissez une ou plusieurs races :<form method="post">
+        <! ouverture d'un autre formulaire>
+        <form method="post">
+            
+        <! insertion de choix à cocher>
+        <p>Choisissez une ou plusieurs races :
         <input type="checkbox" name="hosltein" value="Holstein">Holstein<br> 
         <input type="checkbox" name="jersey" value="Jersey">Jersey<br>
         <input type="checkbox" name="bbn" value="Bleu Blanc Neige">Bleu Blanc Neige<br></p>
         
+        <! insertion de trois zones de texte>
         <p><label for="%race1">Pourcentage minimum d'Holstein : </label> 
         <input type="text" name="pourcentage1" placeholder="Ex: 0.75" /></p>
         <p><label for="%race2">Pourcentage minimum de Jersey : </label> 
@@ -56,14 +76,17 @@
         <input type="text" name="pourcentage2" placeholder="Ex: 0.75"/></p>
         
         <p>
+        <! bouton pour envoyer le formulaire>
         <input type="submit" value="Afficher le graphe">
         </p></form>
         
     <h2>Les animaux nés en période de pleine lune et ceux nés en dehors</h2>
     
     <h3> Choix de la population à étudier</h3> 
+        <! ouverture d'un formulaire>
         <p><form method="post">
-        
+       
+       <! liste déroulante> 
         <p><label for="famille">Choisissez une famille à analyser : </label>
         <select name="famille" required>
             <option value="">Choisissez une option</option>
@@ -72,18 +95,23 @@
             <option value="blanc-bleu-neige">Blanc Bleu Neige</option>
             </select></p>
         
+        <! deux date type qui permet de sélectionner date dans un petit calendrier>
         <p><label for="start">Début de la période à analyser :</label>
         <input type="date" name="trip-start" min="1990-01-01" max="2022-03-27" required></p>
         <p><label for="start">Fin de la période à analyser:</label>
         <input type="date" name="trip-stop" min="1990-01-01" max="2022-03-27" required></p>
         
     <h3>Choix du graphique à montrer</h3>
+        
+        <! liste déroulante pour choisir type de graphe>
         <p><label for="pleinelune">Type de graphique : </label>
         <select name="pleinelune" required>
            <option value="">Choisissez une option</option>
            <option value="lune">Durant la pleine lune</option>
            <option value="autre">Autre</option>
         </select></p>
+    
+        <! boutton qui renvoie le formulaire entier>
         <pre><form action="input_button.htm">
         <p><input type="submit" value="Afficher le graphe">
         </p></form></pre>
