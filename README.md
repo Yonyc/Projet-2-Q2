@@ -41,18 +41,19 @@ A savoir :
 2. Tests
 3. Les templates & les fichiers statiques
 4. __init__.py
-5. db.py,  database.py, Base_de_donnée_sql.sql & Base_de_donnée_sql.db
+5. db.py
 6. show_graph.py
 
 #### 1. Base_de_donnée
 
-courte explication
+La base de donnée comme le nom l'indique comprent les données utilisées par le site en l'occurrence dans le cas présent ce sont les informations relatives aux vaches ainsi que les fichiers permettant sa création.
 
 Ce dossier est composé de:
-1.
-2.
-....
-+mini description de chaque fichier si possible
+1. Un dossier 1002-sql-data qui reprend les fichiers fourni par le tuteur
+2.Base.py, un fichier permettant la création de la base de donnée
+3.Héritage_génétique.py, fichier permettant de calculer le pourcentage d'une race d'une vache et de la relier à ses ancêtres
+4.database.py, fichier montrant la structure de la base de donnée
+5.Base_de_donnée_sql.sql qui est la base de donnée
 
 #### 2. Tests
 
@@ -69,11 +70,10 @@ Les templates sont tous les fichiers Html nécessaires à l'application tandis q
 
 C'est "l'usine à application". C'est dans ce fichier python que tout est regroupé.
 
-#### 5. db.py, database.py, Base_de_donnée_sql.sql & Base_de_donnée_sql.db
+#### 5. db.py
 
 db.py est un fichier python qui s'occupe de lier la base de donnée Base_de_donnée_sql.sql à l'application (dans __init__.py).
 
-explication de database.py, basa_de_donnée_sql.db
 #### 6. show_graph.py 
 
 C'est le fichier qui s'occupe de montrer les graphes correspondant aux résultats des formulaires reçus via accueil.html. Il renvoie ces graphes en renvoyant vers graph.html
@@ -84,7 +84,7 @@ Ce sont les fichiers nécessaires au téléchargement de l'application.
 
 ## Les contribueurs
 Groupe P2_Vincent_5 :
-- Martin Melen
-- Vincent Wuillaume
 - Noah Fraiture
 - Lyse Grolaux
+- Martin Melen
+- Vincent Wuillaume
