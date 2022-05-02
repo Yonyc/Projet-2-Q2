@@ -49,15 +49,11 @@ A savoir :
 La base de donnée comme le nom l'indique comprent les données utilisées par le site en l'occurrence dans le cas présent ce sont les informations relatives aux vaches ainsi que les fichiers permettant sa création.
 
 Ce dossier est composé de:
-1. Un dossier 1002-sql-data qui reprend les fichiers fourni par le tuteur
-
-2.Base.py, un fichier permettant la création de la base de donnée
-
-3.Héritage_génétique.py, fichier permettant de calculer le pourcentage d'une race d'une vache et de la relier à ses ancêtres
-
-4.database.py, fichier montrant la structure de la base de donnée
-
-5.Base_de_donnée_sql.sql qui est la base de donnée
+- Un dossier 1002-sql-data qui reprend les fichiers fourni par le tuteur
+- Base.py, un fichier permettant la création de la base de donnée
+- Héritage_génétique.py, fichier permettant de calculer le pourcentage d'une race d'une vache et de la relier à ses ancêtres
+- database.py, fichier montrant la structure de la base de donnée
+- Base_de_donnée_sql.sql qui est la base de donnée
 
 #### 2. Tests
 
