@@ -9,10 +9,13 @@ Pour rappel, vous pouvez retrouver les étapes ici : http://renaud-detry.net/tea
 
 >git clone https://github.com/Martimini/Projet-2-Q2.git
 
-##### 3. Installez les packages nécessaires au fonctionnement du site. 
+##### 3. Entrez dans le dossier Projet-2-Q2
+
+>cd Projet-2-Q2
+
+##### 4. Installez les packages nécessaires au fonctionnement du site. 
 
 >pip install -r requirements.txt
-
 
 
 ## Pour lancer le site en local
@@ -25,32 +28,53 @@ Vous obiendrez un lien à copier/coller directement dans la barre de navigation 
 
 ## Structure du dépôt
 
+### Les captures d'écran
+
+Captures d'écrans du site et des pages annexes qui affichent les grahes
+
 ### Le dossier flaskr
 
 Le dossier flaskr regroupe tous les fichiers liés au fonctionnement de l'application. 
 
 A savoir :
-1. Les templates & les fichiers statiques
-2. __init__.py
-3. Base_de_donnée_sql.sql & db.py
-4. show_graph.py
+1. Base_de_donnée
+2. Tests
+3. Les templates & les fichiers statiques
+4. __init__.py
+5. db.py,  database.py, Base_de_donnée_sql.sql & Base_de_donnée_sql.db
+6. show_graph.py
 
-#### 1. Les templates & les fichiers statiques
+#### 1. Base_de_donnée
+
+courte explication
+
+Ce dossier est composé de:
+1.
+2.
+....
++mini description de chaque fichier si possible
+
+#### 2. Tests
+
+Dossiers composé de fichiers tests des fonctions utiles à l'application
+
+#### 3. Les templates & les fichiers statiques
 
 Les templates sont tous les fichiers Html nécessaires à l'application tandis que les fichiers statiques sont les fichiers CSS relié au Html.
 
 - accueil.html et styleacceuil.css représentent la page principale
 - graph.html et stylegraph.css correspondent à la mise en page des graphes affichés 
 
-#### 2. __init__.py
+#### 4. __init__.py
 
 C'est "l'usine à application". C'est dans ce fichier python que tout est regroupé.
 
-#### 3. db.py & Base_de_donnée_sql.sql
+#### 5. db.py, database.py, Base_de_donnée_sql.sql & Base_de_donnée_sql.db
 
-db.py s'occupe de lier la base de donnée Base_de_donnée_sql.sql à l'application.
+db.py est un fichier python qui s'occupe de lier la base de donnée Base_de_donnée_sql.sql à l'application (dans __init__.py).
 
-#### 4. show_graph.py 
+explication de database.py, basa_de_donnée_sql.db
+#### 6. show_graph.py 
 
 C'est le fichier qui s'occupe de montrer les graphes correspondant aux résultats des formulaires reçus via accueil.html. Il renvoie ces graphes en renvoyant vers graph.html
 
