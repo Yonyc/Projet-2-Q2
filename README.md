@@ -73,7 +73,8 @@ C'est "l'usine à application". C'est dans ce fichier python que tout est regrou
 
 db.py est un fichier python qui s'occupe de lier la base de donnée Base_de_donnée_sql.sql à l'application (dans __init__.py).
 
-explication de database.py, basa_de_donnée_sql.db
+database.py est le fichier qui crée la structure des tables de la base de donnée
+basa_de_donnée_sql.db est la base de donnée en question
 #### 6. show_graph.py 
 
 C'est le fichier qui s'occupe de montrer les graphes correspondant aux résultats des formulaires reçus via accueil.html. Il renvoie ces graphes en renvoyant vers graph.html
