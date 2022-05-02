@@ -33,6 +33,7 @@ Dans le dossier flaskr:
 	show_graph.py
 
 1.Dans le sous-dossier Base_de_données:
+-Les fichiers en rapport avec la base de donnée
 
 2.Dans le sous-dossier Tests:
 -Tous les fichiers nécessaire aux différents tests qui s’appliquent sur nos codes.
