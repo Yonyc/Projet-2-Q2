@@ -1,24 +1,21 @@
 # Projet-2-Q2
 
 ## Installer l'application en local
-##### 1. Créez d'abord un mini environement et activez le. 
+##### 1. Rentrez dans le dossier du projet "Projet-2-Q2-main" à l'aide la commande "cd". 
 
-Pour rappel, vous pouvez retrouver les étapes ici : http://renaud-detry.net/teaching/flask/installation.html
+"cd\" pour revenir à la racine de l'ordinateur suivit de "cd %chemin du dossier projet%"
 
-##### 2. Une fois le mini environement activé, clonez le dépôt GitHub.
+##### 2. Créer l'environnement virtuel
 
->git clone https://github.com/Martimini/Projet-2-Q2.git
+Pour cela on suit les instructions du site du cours. Si vous êtes sur un autre os que windowsil suffit de suivre les instructions du site http://renaud-detry.net/teaching/flask/installation.html. Nous rappelons ici les instructions pour windows :
+> py -3 -m venv venv (pour créer l'environnement)
+> venv\Scripts\activate (pour l'activer)
 
-##### 3. Entrez dans le dossier Projet-2-Q2
-
->cd Projet-2-Q2
-
-##### 4. Installez les packages nécessaires au fonctionnement du site. 
+##### 3. Installez les packages nécessaires au fonctionnement du site. 
 
 >pip install -r requirements.txt
 
-
-## Pour lancer le site en local
+##### 4. Pour lancer le site en local
 
 >set FLASK_APP=flaskr
 
