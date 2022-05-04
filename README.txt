@@ -3,16 +3,18 @@ Guide d'installation de notre site web
 
 Dans l'invite de commande:
 
-1.Créer un environnement virtuel et l’activer (http://renaud-detry.net/teaching/flask/installation.html) 
-2.Cloner le lien du github par la commande 
-	git clone https://github.com/Martimini/Projet-2-Q2.git
-3.Rentrer dans les fichiers du git hub par la commande 
-cd Projet-2-Q2
-4.Installer les packages utiles au bon fonctionnement du site par la commande
-Pip install -r requirements.txt
-5.Lancer le site par les commandes
-	>set FLASK_APP=flaskr
-	>flask run
+1. Rentrez dans le dossier du projet "Projet-2-Q2-main" à l'aide la commande "cd". ("cd\" pour revenir à la racine de l'ordinateur suivit de "cd %chemin du dossier projet%")
+
+2. Créer l'environnement virtuel. Pour cela on suit les instructions du site du cours. Si vous êtes sur un autre os que windowsil suffit de suivre les instructions du site http://renaud-detry.net/teaching/flask/installation.html. Nous rappelons ici les instructions pour windows ::
+py -3 -m venv venv (pour créer l'environnement)
+venv\Scripts\activate (pour l'activer)
+
+3 .Installer les packages utiles au bon fonctionnement du site par la commande
+pip install -r requirements.txt
+
+4.Lancer le site par les commandes
+set FLASK_APP=flaskr
+flask run
 
 Suite à ces commandes, vous obtiendrez un lien qui viendra à vous directement dans le terminal.
 Vous le Copiez-Coller dans un navigateur internet et vous verrez apparaitre notre site.
