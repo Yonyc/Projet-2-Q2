@@ -1,4 +1,5 @@
 from fullmoon import IsFullMoon
+import sqlite3
 import numpy as np
 from PIL import Image
 from flask import (
