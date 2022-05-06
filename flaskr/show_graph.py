@@ -7,7 +7,7 @@ from flask import (
 )
 from flaskr.db import get_db
 
-bp = Blueprint('graph', __name__, url_prefix='/graph')
+bp = Blueprint('graph', __name__)
 
 def isSmaller(date, date2):
     """
@@ -60,9 +60,9 @@ def get_graph_lune():
         else:
             validated_data = []
             for i in data:
-                animal_id = db.execute('SELECT animal_id FROM animaux_velages WHERE velage_id = ?'), (i[1],)
-                famille_id = db.execute('SELECT famille_id FROM animaux WHERE id = ?'), (animal_id,)
-                famille_nom = db.execute('SELECT nom FROM familles WHERE id = ?'), (famille_id,)
+                animal_id = db.execute('SELECT animal_id FROM animaux_velages WHERE velage_id = ?', (i[1],))
+                famille_id = db.execute('SELECT famille_id FROM animaux WHERE id = ?', (animal_id,))
+                famille_nom = db.execute('SELECT nom FROM familles WHERE id = ?', (famille_id,))
                 if famille_nom == famille:
                     validated_data.append(i)
             dic = lune(validated_data, date_debut, date_fin)
@@ -91,7 +91,7 @@ def velages(date_and_id, debut, fin):
             counting[date] = counting.get(date, 0) + 1
     return counting
 
-@bp.route('/graphs_velage', methods=('GET', 'POST'))
+@bp.route('/graphs_velage', methods=['GET', 'POST'])
 def get_graph_velage():
     """
     :return: HTML page with data as parameters
@@ -102,7 +102,7 @@ def get_graph_velage():
         famille = request.form['famille_velage']
         db = get_db()
         data = db.execute('SELECT date, id FROM velages')
-        if famille is None:
+        if famille == "":
             dic = velages(data, date_debut, date_fin)
         else:
             validated_data = []
@@ -116,6 +116,7 @@ def get_graph_velage():
         keys = dic.keys()
         values = dic.values()
         error = "Aucune donnée" if dic == {} else None
+        print(dic)
         if error is None:
             label = "Période"
             return render_template('graph.html', keys=keys, values=values, name=label)
