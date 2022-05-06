@@ -3,7 +3,13 @@
 ## Installer l'application en local
 ##### 1. Rentrez dans le dossier du projet "Projet-2-Q2-main" à l'aide la commande "cd". 
 
-"cd\" pour revenir à la racine de l'ordinateur suivit de "cd %chemin du dossier projet%"
+>cd\
+>
+Pour revenir à la racine de l'ordinateur suivit de 
+
+> cd %Chemin du dossier projet%
+
+Pour arriver au dossier du projet
 
 ##### 2. Créer l'environnement virtuel
 
