@@ -37,7 +37,7 @@
         <p><form method="post" action="/graphs_velage">
         <p><label for="famille">Choisissez une famille à analyser : </label>
         <! insertion d'une liste déroulante>
-            <select name="famille" id="famille_velage"required>
+            <select name="famille_velage" id="famille_velage">
             <option value="">Choisissez une option</option>
             <option value="holstein">Holstein</option>
             <option value="jersey">Jersey</option>
@@ -46,9 +46,9 @@
     
         <! insertion d'un calendrier>
         <p><label for="start">Début de la période à analyser :</label>
-        <input type="date" name="trip-start" id="debut_velage" min="1990-01-01" max="2022-03-27" required></p>
+        <input type="date" name="debut_velage" id="debut_velage" min="1990-01-01" max="2022-03-27" required></p>
         <p><label for="start">Fin de la période à analyser:</label>
-        <input type="date" name="trip-stop" id="fin_velage" min="1990-01-01" max="2022-03-27" required></p>
+        <input type="date" name="fin_velage" id="fin_velage" min="1990-01-01" max="2022-03-27" required></p>
         <p><label for="button">
         
         <! insertion d'un bouton qui renvoie le formulaire>
@@ -70,11 +70,11 @@
         
         <! insertion de trois zones de texte>
         <p><label for="%race1">Pourcentage minimum d'Holstein : </label> 
-        <input type="text" name="pourcentage1" id="holstein_pourcentage" placeholder="Ex: 0.75" /></p>
+        <input type="text" name="holstein_pourcentage" id="holstein_pourcentage" placeholder="Ex: 0.75" /></p>
         <p><label for="%race2">Pourcentage minimum de Jersey : </label> 
-        <input type="text" name="pourcentage2" id="jersey_pourcentage" placeholder="Ex: 0.75"/></p>
+        <input type="text" name="jersey_pourcentage" id="jersey_pourcentage" placeholder="Ex: 0.75"/></p>
         <p><label for="%race3">Pourcentage minimum de Bleu Blanc Neige: </label> 
-        <input type="text" name="pourcentage2" id="bbn_pourcentage" placeholder="Ex: 0.75"/></p>
+        <input type="text" name="bbn_pourcentage" id="bbn_pourcentage" placeholder="Ex: 0.75"/></p>
         
         <p>
         <! bouton pour envoyer le formulaire>
@@ -89,7 +89,7 @@
        
        <! liste déroulante> 
         <p><label for="famille">Choisissez une famille à analyser : </label>
-        <select name="famille" id="famille_lune" required>
+        <select name="famille_lune" id="famille_lune" required>
             <option value="">Choisissez une option</option>
             <option value="holstein">Holstein</option>
             <option value="jersey">Jersey</option>
@@ -98,9 +98,9 @@
         
         <! deux date type qui permet de sélectionner date dans un petit calendrier>
         <p><label for="start">Début de la période à analyser :</label>
-        <input type="date" name="trip-start" id="debut_lune" min="1990-01-01" max="2022-03-27" required></p>
+        <input type="date" name="debut_lune" id="debut_lune" min="1990-01-01" max="2022-03-27" required></p>
         <p><label for="start">Fin de la période à analyser:</label>
-        <input type="date" name="trip-stop" id="fin_lune" min="1990-01-01" max="2022-03-27" required></p>
+        <input type="date" name="fin_lune" id="fin_lune" min="1990-01-01" max="2022-03-27" required></p>
 
     <h3>Choix du graphique à montrer</h3>
         
