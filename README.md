@@ -13,7 +13,7 @@ Pour arriver au dossier du projet
 
 ##### 2. Créer l'environnement virtuel
 
-Pour cela on suit les instructions du site du cours. Si vous êtes sur un autre os que windowsil suffit de suivre les instructions du site http://renaud-detry.net/teaching/flask/installation.html. Nous rappelons ici les instructions pour windows :
+Pour cela on suit les instructions du site du cours. Si vous êtes sur un autre os que windows il suffit de suivre les instructions du site http://renaud-detry.net/teaching/flask/installation.html. Nous rappelons ici les instructions pour windows :
 > py -3 -m venv venv (pour créer l'environnement)
 > venv\Scripts\activate (pour l'activer)
 
