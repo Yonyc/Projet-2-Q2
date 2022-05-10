@@ -21,11 +21,23 @@ Pour cela on suit les instructions du site du cours. Si vous êtes sur un autre 
 
 >pip install -r requirements.txt
 
-##### 4. Pour lancer le site en local
+##### 4. Initialiser la base de donnée
+
+>python flaskr/Base_de_donnee/Base.py
+
+##### 5. Pour lancer le site en local
+
+###### Pour Windows :
 
 >set FLASK_APP=flaskr
 
 >flask run 
+
+###### Pour Linux et Mac :
+
+$ export FLASK_APP=flaksr
+
+$ flask run
 
 Vous obiendrez un lien à copier/coller directement dans la barre de navigation du moteur de recherche
 

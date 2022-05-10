@@ -1,7 +1,5 @@
 from fullmoon import IsFullMoon
 import sqlite3
-import numpy as np
-from PIL import Image
 from flask import (
     Blueprint, flash, redirect, render_template, request, url_for
 )

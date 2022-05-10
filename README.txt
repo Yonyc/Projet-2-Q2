@@ -12,9 +12,18 @@ venv\Scripts\activate (pour l'activer)
 3 .Installer les packages utiles au bon fonctionnement du site par la commande
 pip install -r requirements.txt
 
-4.Lancer le site par les commandes
-set FLASK_APP=flaskr
-flask run
+4. Initialiser la base de données
+python flask/Base_de_donnee/Base.py
+
+5.Lancer le site par les commandes
+
+Pour Windows:
+> set FLASK_APP=flaskr
+> flask run
+
+Pour Linux et Mac:
+$ export FLASK_APP=flask
+$ flask run
 
 Suite à ces commandes, vous obtiendrez un lien qui viendra à vous directement dans le terminal.
 Vous le Copiez-Coller dans un navigateur internet et vous verrez apparaitre notre site.
