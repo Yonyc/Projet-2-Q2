@@ -5,7 +5,7 @@ from PIL import Image
 from flask import (
     Blueprint, flash, redirect, render_template, request, url_for
 )
-conn = sqlite3.connect("Base_de_donne_sql.sql", check_same_thread=False)
+conn = sqlite3.connect("Base_de_donnee/Base_de_donne_sql.db", check_same_thread=False)
 cursor = conn.cursor()
 
 bp = Blueprint('graph', __name__)
@@ -101,17 +101,17 @@ def get_graph_velage():
         date_debut = request.form['debut_velage']
         date_fin = request.form['fin_velage']
         famille = request.form['famille_velage']
-        db = get_db()
-        data = db.execute('SELECT date, id FROM velages')
+        data = cursor.execute('SELECT date, id FROM velages')
         if famille == "":
             dic = velages(data, date_debut, date_fin)
         else:
             validated_data = []
             for i in data:
-                animal_id = cursor.execute('SELECT animal_id FROM animaux_velages WHERE velage_id = ?', (i[1],))
-                famille_id = cursor.execute('SELECT famille_id FROM animaux WHERE id = ?', (animal_id,))
-                famille_nom = cursor.execute('SELECT nom FROM familles WHERE id = ?', (famille_id,))
-                if famille_nom == famille:
+                animal_id = cursor.execute('SELECT animal_id FROM animaux_velages WHERE velage_id = ?', (i[1],)).fetchone()
+                famille_id = cursor.execute('SELECT famille_id FROM animaux WHERE id = ?', (animal_id[0],)).fetchone()
+                famille_nom = cursor.execute('SELECT nom FROM familles WHERE id = ?', (famille_id[0],)).fetchone()
+                print(famille_nom[0])
+                if famille_nom[0] == famille:
                     validated_data.append(i)
             dic = velages(validated_data, date_debut, date_fin)
         keys = dic.keys()

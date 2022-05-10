@@ -3,12 +3,13 @@ import pathlib
 from flask import Flask, render_template
 
 
+
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev',
-        DATABASE=os.path.join(pathlib.Path(__file__).parent.absolute(), "Base_de_donnée/Base_de_donné_sql.db")
+        DATABASE=os.path.join(pathlib.Path(__file__).parent.absolute(), "Base_de_donnee/Base_de_donne_sql.db")
     )
 
     if test_config is None:
@@ -30,11 +31,11 @@ def create_app(test_config=None):
         return render_template('accueil.html')
     
     #importe le fichier db.py qui permet de lier la base de donnée à 'l'usine à application'
-    from . import db
+    import db
     db.init_app(app)
     
     #importe le fichier show_graph.py qui permet de renvoyer le graphe correspondant aux outputs des formulaires html
-    from . import show_graph
+    import show_graph
     app.register_blueprint(show_graph.bp)
     
     return app

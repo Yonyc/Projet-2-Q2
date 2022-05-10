@@ -27,6 +27,7 @@ def main():
         # On insert les données
         cursor.executescript(ajou_contenu)
         db.commit()
+        print("Added " + nouveau_fichier)
 
     # On ajoute la fonction permettant de calculer l'héritage d'une vache grâce à ses ancêtres
     creation_race(db)
@@ -34,4 +35,8 @@ def main():
     db.close()
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(e)
+    input()
