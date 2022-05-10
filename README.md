@@ -21,7 +21,11 @@ Pour cela on suit les instructions du site du cours. Si vous êtes sur un autre 
 
 >pip install -r requirements.txt
 
-##### 4. Pour lancer le site en local
+##### 4. Initialiser la base de donnée
+
+>python flaskr/Base_de_donnee/Base.py
+
+##### 5. Pour lancer le site en local
 
 >set FLASK_APP=flaskr
 
