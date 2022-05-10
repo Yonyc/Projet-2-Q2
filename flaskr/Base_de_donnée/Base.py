@@ -10,7 +10,7 @@ def main():
     cursor = db.cursor()
 
     # On ouvre le script sql qui va permettre de créer la table de données
-    with open(os.path.join(pathlib.Path(__file__).parent.absolute(), "Base_de_donnée_sql.sql")) as f:
+    with open(os.path.join(pathlib.Path(__file__).parent.absolute(), "database.sql")) as f:
         db_Base = f.read()
 
     # On exécute le script sql
