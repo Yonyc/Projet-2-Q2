@@ -101,8 +101,7 @@ def get_graph_velage():
         date_debut = request.form['debut_velage']
         date_fin = request.form['fin_velage']
         famille = request.form['famille_velage']
-        db = get_db()
-        data = db.execute('SELECT date, id FROM velages')
+        data = cursor.execute('SELECT date, id FROM velages')
         if famille == "":
             dic = velages(data, date_debut, date_fin)
         else:
