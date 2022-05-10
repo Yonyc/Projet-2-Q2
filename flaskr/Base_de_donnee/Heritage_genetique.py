@@ -45,7 +45,7 @@ def trouver_race(db: sqlite3.Connection, animal_id: int):
 
     ajout_race(db, animal_id, races)
 
-def création_race(db: sqlite3.Connection):
+def creation_race(db: sqlite3.Connection):
     réponse: List[int] = vaches(db)
     for animal_id in réponse:
         if len(races_vache(db, animal_id)) == 0:
