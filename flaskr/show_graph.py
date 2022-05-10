@@ -5,7 +5,8 @@ from PIL import Image
 from flask import (
     Blueprint, flash, redirect, render_template, request, url_for
 )
-from flaskr.db import get_db
+conn = sqlite3.connect("Base_de_donné_sql.sql", check_same_thread=False)
+cursor = conn.cursor()
 
 bp = Blueprint('graph', __name__)
 
@@ -53,16 +54,16 @@ def get_graph_lune():
         date_fin = request.form['fin_lune']
         famille = request.form['famille_lune']
 
-        db = get_db()
-        data = db.execute('SELECT date, id FROM velages')
+        
+        data = cursor.execute('SELECT date, id FROM velages')
         if famille is None:
             dic = lune(data, date_debut, date_fin)
         else:
             validated_data = []
             for i in data:
-                animal_id = db.execute('SELECT animal_id FROM animaux_velages WHERE velage_id = ?', (i[1],))
-                famille_id = db.execute('SELECT famille_id FROM animaux WHERE id = ?', (animal_id,))
-                famille_nom = db.execute('SELECT nom FROM familles WHERE id = ?', (famille_id,))
+                animal_id = cursor.execute('SELECT animal_id FROM animaux_velages WHERE velage_id = ?', (i[1],))
+                famille_id = cursor.execute('SELECT famille_id FROM animaux WHERE id = ?', (animal_id,))
+                famille_nom = cursor.execute('SELECT nom FROM familles WHERE id = ?', (famille_id,))
                 if famille_nom == famille:
                     validated_data.append(i)
             dic = lune(validated_data, date_debut, date_fin)
@@ -107,9 +108,9 @@ def get_graph_velage():
         else:
             validated_data = []
             for i in data:
-                animal_id = db.execute('SELECT animal_id FROM animaux_velages WHERE velage_id = ?'), (i[1],)
-                famille_id = db.execute('SELECT famille_id FROM animaux WHERE id = ?'), (animal_id,)
-                famille_nom = db.execute('SELECT nom FROM familles WHERE id = ?'), (famille_id,)
+                animal_id = cursor.execute('SELECT animal_id FROM animaux_velages WHERE velage_id = ?'), (i[1],)
+                famille_id = cursor.execute('SELECT famille_id FROM animaux WHERE id = ?'), (animal_id,)
+                famille_nom = cursor.execute('SELECT nom FROM familles WHERE id = ?'), (famille_id,)
                 if famille_nom == famille:
                     validated_data.append(i)
             dic = velages(validated_data, date_debut, date_fin)
@@ -162,8 +163,8 @@ def get_graph_races():
             races.append("bleu-blanc-belge")
             pourcentage.append(bbn_pourcentage)
 
-        db = get_db()
-        data = db.execute('SELECT pourcentage, type_id FROM animaux_types')
+     
+        data = cursor.execute('SELECT pourcentage, type_id FROM animaux_types')
         dic = show_races(data, races, pourcentage)
         keys = dic.keys()
         values = dic.values()
