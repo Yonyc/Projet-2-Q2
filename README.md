@@ -27,9 +27,17 @@ Pour cela on suit les instructions du site du cours. Si vous êtes sur un autre 
 
 ##### 5. Pour lancer le site en local
 
+###### Pour Windows :
+
 >set FLASK_APP=flaskr
 
 >flask run 
+
+###### Pour Linux et Mac :
+
+$ export FLASK_APP=flaksr
+
+$ flask run
 
 Vous obiendrez un lien à copier/coller directement dans la barre de navigation du moteur de recherche
 
