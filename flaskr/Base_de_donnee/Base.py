@@ -1,12 +1,12 @@
 import sqlite3
 import os
 import pathlib
-from Héritage_génétique import création_race
+from Heritage_genetique import creation_race
 
 def main():
 
     # On établi une connection à la base de donnée
-    db = sqlite3.connect(os.path.join(pathlib.Path(__file__).parent.absolute(), "Base_de_donné_sql.db"))
+    db = sqlite3.connect(os.path.join(pathlib.Path(__file__).parent.absolute(), "Base_de_donne_sql.db"))
     cursor = db.cursor()
 
     # On ouvre le script sql qui va permettre de créer la table de données
@@ -29,7 +29,7 @@ def main():
         db.commit()
 
     # On ajoute la fonction permettant de calculer l'héritage d'une vache grâce à ses ancêtres
-    création_race(db)
+    creation_race(db)
 
     db.close()
 
