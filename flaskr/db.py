@@ -7,7 +7,7 @@ from flask.cli import with_appcontext
 
 def get_db():
     if 'db' not in g:
-        g.db = sqlite3.connect("Base_de_donné_sql.db")
+        g.db = sqlite3.connect("Base_de_donne_sql.db")
         g.db.row_factory =sqlite3.Row
     
 
